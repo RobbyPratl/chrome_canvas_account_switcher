@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Canvas Multi-Login Switcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+    }
+    #canvasList {
+      margin-top: 10px;
+    }
+    .canvas-link {
+      display: block;
+      margin: 5px 0;
+    }
+    #status {
+      color: green;
+      margin-top: 10px;
+    }
+    .toggle-container {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .toggle-container label {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Canvas Switcher</h2>
+  
+  <input id="canvasUrlInput" type="text" placeholder="Enter Canvas URL..." />
+  <button id="addCanvasBtn">Add</button>
+  
+  <div id="canvasList"></div>
+  
+  <div class="toggle-container">
+    <input type="checkbox" id="toggleSwitcher" />
+    <label for="toggleSwitcher">Enable Switcher</label>
+  </div>
+  
+  <div id="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

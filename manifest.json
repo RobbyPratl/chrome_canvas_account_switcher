@@ -1,0 +1,32 @@
+{
+    "name": "Canvas Multi-Login Switcher",
+    "description": "Quickly switch between multiple Canvas login pages.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+      "storage",
+      "scripting"
+    ],
+    "host_permissions": [
+      "*://*.instructure.com/*",
+      "*://*.edu/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.instructure.com/*",
+          "*://*.edu/*"
+        ],
+        "js": ["content.js"],
+        "css": ["styles/content.css"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
